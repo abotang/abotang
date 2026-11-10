@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="425" viewBox="0 0 980 425" role="img">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101927"/><stop offset="1" stop-color="#070b14"/></linearGradient>
+ <linearGradient id="neon"><stop stop-color="#7cf7ca"/><stop offset=".55" stop-color="#78caff"/><stop offset="1" stop-color="#bb9cff"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#478c9a" stop-opacity=".25"/><stop offset="1" stop-color="#101927" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M 36 0 H 0 V 36" fill="none" stroke="#b0c9e5" stroke-opacity=".045"/></pattern>
+</defs>
+<style>text{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif}.mono{font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif}.muted{fill:#93a5bd}@media(prefers-reduced-motion:reduce){.orbit,.pulse{animation:none!important}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{50%{opacity:.4}}.orbit{transform-origin:770px 218px;animation:spin 36s linear infinite}.pulse{animation:breathe 3s ease-in-out infinite}</style>
+<rect width="100%" height="100%" rx="20" fill="url(#bg)"/>
+<rect width="100%" height="100%" rx="20" fill="url(#grid)"/>
+<title>强化学习 × LLM</title>
+<desc>强化学习 × LLM。一个持续探索、构建与实验的个人空间。</desc>
+<circle cx="770" cy="218" r="250" fill="url(#halo)"/>
+<path d="M32 1 H948" stroke="url(#neon)" stroke-width="2"/>
+<circle cx="45" cy="42" r="4" fill="#7cf7ca" class="pulse"/>
+<text x="60" y="47" class="mono" fill="#a7bcd1" font-size="12" letter-spacing="0">研究 · 实验 · 探索</text>
+<text x="42" y="153" fill="#edf6ff" font-size="50" font-weight="500">强化学习 × LLM</text>
+<text x="44" y="191" fill="#9db6ca" font-size="17" font-weight="400">Reinforcement Learning × Large Language Models</text>
+<text x="43" y="226" fill="#adbed2" font-size="16">在经典算法里找直觉，在智能体里试想法。</text>
+<text x="43" y="253" fill="#adbed2" font-size="16">从环境与奖励，到推理与行动。</text>
+<rect x="42" y="287" width="473" height="51" rx="8" fill="#080d17" stroke="#233449"/>
+<text x="59" y="318" class="mono" font-size="14"><tspan fill="#7cf7ca">➜ </tspan><tspan fill="#c9d8eb">observe → think → act → learn</tspan><tspan fill="#7cf7ca" class="pulse"> ▋</tspan></text>
+<g fill="none" stroke="#8fb7cc"><circle cx="770" cy="218" r="137" stroke-opacity=".17"/><circle cx="770" cy="218" r="101" stroke-opacity=".15" stroke-dasharray="3 9"/><ellipse cx="770" cy="218" rx="161" ry="57" transform="rotate(-34 770 218)" stroke-opacity=".2"/><ellipse cx="770" cy="218" rx="161" ry="57" transform="rotate(34 770 218)" stroke-opacity=".2"/></g>
+<g class="orbit"><circle cx="770" cy="81" r="6" fill="#7cf7ca"/><circle cx="889" cy="286" r="5" fill="#bb9cff"/><circle cx="651" cy="286" r="5" fill="#78caff"/></g>
+<path d="M770 127 L849 173 L849 263 L770 309 L691 263 L691 173 Z" fill="#101e2b" stroke="url(#neon)" stroke-opacity=".65"/>
+<path d="M770 147 L831 182 L831 253 L770 289 L709 253 L709 182 Z" fill="none" stroke="#79b6c4" stroke-opacity=".2"/>
+<text x="770" y="232" text-anchor="middle" fill="#e6f7ff" font-size="48" font-weight="600">π<tspan fill="#7cf7ca" font-size="24">θ</tspan></text>
+<g class="mono" font-size="11" fill="#a4bfd1"><text x="633" y="79">POLICY</text><text x="861" y="110">REASON</text><text x="836" y="360">ENVIRONMENT</text></g>
+<path d="M42 371 H938" stroke="#263447"/>
+<text x="43" y="399" class="mono" font-size="11" fill="#8299b1" letter-spacing="0">REINFORCEMENT LEARNING</text><text x="295" y="399" class="mono" font-size="11" fill="#8299b1" letter-spacing="0">AGENT SYSTEMS</text><text x="478" y="399" class="mono" font-size="11" fill="#8299b1" letter-spacing="0">LARGE LANGUAGE MODELS</text>
+<text x="936" y="399" text-anchor="end" class="mono" font-size="11" fill="#7cf7ca">KEEP EXPLORING ↗</text></svg>
