@@ -1,0 +1,43 @@
+name: Refresh contribution orbit
+
+on:
+  schedule:
+    # 08:17 Asia/Shanghai
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/refresh_orbit.py'
+      - '.github/workflows/refresh-orbit.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-contribution-orbit
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Read the public calendar and render the orbit
+        run: python3 scripts/refresh_orbit.py
+      - name: Publish changed calendar
+        run: |
+          asset=assets/contributions-orbit.svg
+          git add -- "$asset"
+          if git diff --cached --quiet -- "$asset"; then
+            echo "Calendar is already current."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh public contribution orbit' -- "$asset"
+          git push
